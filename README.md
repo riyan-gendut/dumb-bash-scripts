@@ -13,3 +13,5 @@
 * ***copysmlupdtupdt.sh*** : a script that takes two path as an argument, finds ***every*** files on the first path, and then moves the file from the second path into the first IF the file on the second path has the same name and is smaller than the file in the first path. this time, it's using information from `stat` and using bash logic to call `mv` instead of rsync.
 
 * ***ffrecord.sh*** : a script that takes a filename as an argument and uses ffmpeg to grab the output of the x11 server and record it into 1 minute mp4/h264 video with that filename. taken from https://youtu.be/jB0qv0Ml88A. optionally, a second argument could be used to specify the number of a device from `pactl list short sources` as an audio source, but if unspecified it would simply not record audio.
+
+* ***ffrecord_accel.sh*** : same as `ffrecord` but it uses `VAAPI` hardware acceleration. ***untested****
